@@ -1,4 +1,4 @@
-package com.example.tweetsearcher;
+package com.example.tweetsearcher.Views;
 
 import com.example.tweetsearcher.Base.BaseView;
 

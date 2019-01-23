@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TweetSearcher</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">KEY_HERE</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">SECRET_HER</string>
 </resources>
