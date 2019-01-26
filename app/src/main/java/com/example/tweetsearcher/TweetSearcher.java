@@ -65,6 +65,11 @@ public class TweetSearcher {
             this.query = query;
         }
 
+        public Filter(String query, int count) {
+            this.query = query;
+            this.count = count;
+        }
+
         public String getQuery() {
             return query;
         }

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    android:elevation="@dimen/item_tweet_card_elevation"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:padding="@dimen/item_tweet_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tweet_creator_name"
+            android:id="@+id/tweeter_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+
+            android:layout_marginLeft="@dimen/tweet_text_left_margin"
+            android:id="@+id/tweet_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="This is an example tweet."
+            android:textSize="@dimen/item_twitter_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/tweet_creator_name"
+            app:layout_constraintLeft_toRightOf="@id/tweeter_image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textSize="@dimen/item_twitter_creator_text_size"
+            android:textColor="@color/twitter_blue_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/tweet_creator_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Donald Trump"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tweet_text"
+            tools:layout_editor_absoluteX="10dp" />
+
+
+        <LinearLayout
+            android:weightSum="100"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tweet_creator_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_weight="50"
+               android:orientation="horizontal"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+               <ImageView
+                   android:layout_gravity="center_vertical"
+                   android:src="@drawable/ic_favorite_blue_24dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+               <TextView
+                   android:layout_marginLeft="5dp"
+                   android:layout_gravity="center_vertical"
+                   android:text=""
+                   android:id="@+id/tweet_love_count"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+           </LinearLayout>
+            <LinearLayout
+                android:layout_weight="50"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ic_group_retweet_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:text=""
+                    android:id="@+id/tweet_retweet_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
